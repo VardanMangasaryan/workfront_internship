@@ -127,7 +127,7 @@ if (a >= b && a >= c) {
 // A student passes if all three examinations are passed.
 // Additionally a student may pass if only one subject is failed but the overall average is greater than or equal to 50.
 // The pass mark for an individual subject is 40.
-let grades = [49, 30, 30];
+let grades = [];
 let count = 0;
 for (let i = 0; i < grades.length; i++) {
     if (grades[i] <= 40) {
