@@ -53,11 +53,6 @@ console.log((num1 + num2 + num3 + num4 + num5) / 5);
 //......................................................................................................
 
 
-
-
-
-
-
 //7: Check if a number is a multiple of 3, 5 or 7 and output the appropriate message.
 let divNumber;
 if (divNumber % 5 !== 0 && divNumber % 7 !== 0 && divNumber % 3 !== 0) {
@@ -78,12 +73,6 @@ if (divNumber % 5 !== 0 && divNumber % 7 !== 0 && divNumber % 3 !== 0) {
     console.log(`${divNumber} is a multiple of 3`);
 }
 //......................................................................................................
-
-
-
-
-
-
 
 
 //8: Given an age, figure out whether someone is a baby(1 months - 12 months), toddler (1 year - 2 years), child(3 years - 12 years ), teenager(13 years - 17 years) or adult(18 years and more ). Also check that age in months is between 1 and 12.
@@ -172,9 +161,11 @@ if (number1 / number2 / number3 < 0) {
 //Just Joke :D
 
 
-let number1, number2, number3, isUnsigned;
+let numbs, isUnsigned;
+numbs = [];
 
-let isUnsigned = false;
+isUnsigned = false;
+
 for (let l = 0; l < numbs.length; l++) {
     var newCount = 0;
     if (numbs[l] === 0) {
@@ -194,10 +185,6 @@ if (isUnsigned) {
 //......................................................................................................
 
 
-
-
-
-
 //12: Input three numbers a, b, c respectively, where a is a non zero number and write a program to solve quadratic equations: ax2+ bx+c=0. (Hint: use Math.pow or Math.sqrt).
 
 let quadA, quadB, quadC, discr;
@@ -214,12 +201,6 @@ if (quadA === 0) {
     console.log(`Solutions are ${-(quadB - sqrtDiscr) / (2 * quadA)} and ${-(quadB + sqrtDiscr) / (2 * quadA)}`)
 }
 //......................................................................................................
-
-
-
-
-
-
 
 
 //13: Given the following code rewrite it using only two if operators. (Hint: use logical operators).
@@ -259,9 +240,6 @@ if (isInNumber) {
 //......................................................................................................
 
 
-
-
-
 //15: Enter a number. Reverse its first and last digits. Print the new number.
 
 let longNumber;
@@ -298,8 +276,6 @@ if (firstParam > 0 && secondParam > 0) {
     console.log("Please enter only positives")
 }
 //......................................................................................................
-
-
 
 
 //18: (***) Enter a number. Find the difference between its biggest and smallest digits.
