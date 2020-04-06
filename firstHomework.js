@@ -20,8 +20,7 @@ if (first % second === 0 || second % first === 0) {
 
 //3: Given two variables, which are the angles of a triangle. Find the third angle of the triangle. (Sum of the angles of a triangle equals 180 degrees).
 
-let firstAngle = 19;
-let secondAngle = 49;
+let firstAngle, secondAngle;
 let thirdAngle = 180 - (firstAngle + secondAngle);
 
 console.log(thirdAngle);
@@ -36,8 +35,8 @@ console.log(`${n}${2 * n}${3 * n}`);
 
 
 //5: Given a positive integer. Bring the last digit of the number to the beginning. Print the new number. If the last digit of the inserted number is 0, number remains the same.
-let newNumber = 8900;
-let reminder = newNumber % 10;
+let newNumber, reminder;
+reminder = newNumber % 10;
 
 if (reminder === 0 || reminder === newNumber) {
     console.log(newNumber)
@@ -48,11 +47,8 @@ if (reminder === 0 || reminder === newNumber) {
 
 
 //6: Given five numbers as input. Calculate and print the average of the numbers(without using arrays).
-let num1 = 1;
-let num2 = 2;
-let num3 = 3;
-let num4 = 4;
-let num5 = 5;
+let num1, num2, num3, num4, num5;
+
 console.log((num1 + num2 + num3 + num4 + num5) / 5);
 //......................................................................................................
 
@@ -63,7 +59,7 @@ console.log((num1 + num2 + num3 + num4 + num5) / 5);
 
 
 //7: Check if a number is a multiple of 3, 5 or 7 and output the appropriate message.
-let divNumber = 24;
+let divNumber;
 if (divNumber % 5 !== 0 && divNumber % 7 !== 0 && divNumber % 3 !== 0) {
     console.log(`${divNumber} is not a multiple of 3, 5 or 7.`)
 } else if (divNumber % 5 === 0 && divNumber % 7 === 0 && divNumber % 3 === 0) {
@@ -92,16 +88,16 @@ if (divNumber % 5 !== 0 && divNumber % 7 !== 0 && divNumber % 3 !== 0) {
 
 //8: Given an age, figure out whether someone is a baby(1 months - 12 months), toddler (1 year - 2 years), child(3 years - 12 years ), teenager(13 years - 17 years) or adult(18 years and more ). Also check that age in months is between 1 and 12.
 
-let age = [4, "year"];
-if (age[1] === "year") {
+let age, word;
+if (word === "year") {
     switch (true) {
-        case (1 <= age[0] && age[0] <= 2):
+        case (1 <= age && age <= 2):
             console.log("Toddler");
             break;
-        case (3 <= age[0] && age[0] <= 12):
+        case (3 <= age && age <= 12):
             console.log("Child");
             break;
-        case (13 <= age[0] && age[0] <= 17):
+        case (13 <= age && age <= 17):
             console.log("Teenager");
             break;
         default:
@@ -114,10 +110,8 @@ if (age[1] === "year") {
 
 
 //9: Given three numbers. Sort them by the ascending order.
-let numberList = [3, 2, 1];
-let a = numberList[0];
-let b = numberList[1];
-let c = numberList[2];
+let a, b, c;
+
 if (a >= b && a >= c) {
     if (b >= c) {
         console.log(`${c}, ${b}, ${a}`)
@@ -166,9 +160,7 @@ if (count === 0) {
 
 
 //11: Find the sign of product of three numbers without multiplication operator. Display the specified sign.
-let number1 = -90;
-let number2 = -9;
-let number3 = -345;
+let number1, number2, number3;
 
 if (number1 / number2 / number3 < 0) {
     console.log("-")
@@ -180,7 +172,8 @@ if (number1 / number2 / number3 < 0) {
 //Just Joke :D
 
 
-let numbs = [-90, 0, 0];
+let number1, number2, number3, isUnsigned;
+
 let isUnsigned = false;
 for (let l = 0; l < numbs.length; l++) {
     var newCount = 0;
@@ -201,12 +194,15 @@ if (isUnsigned) {
 //......................................................................................................
 
 
+
+
+
+
 //12: Input three numbers a, b, c respectively, where a is a non zero number and write a program to solve quadratic equations: ax2+ bx+c=0. (Hint: use Math.pow or Math.sqrt).
 
-let quadA = 5;
-let quadB = -13;
-let quadC = 6;
-let discr = (Math.pow(quadB, 2) - (4 * quadA * quadC));
+let quadA, quadB, quadC, discr;
+discr = (Math.pow(quadB, 2) - (4 * quadA * quadC));
+
 if (quadA === 0) {
     console.log("Enter valid constants")
 } else if (discr < 0) {
@@ -218,6 +214,12 @@ if (quadA === 0) {
     console.log(`Solutions are ${-(quadB - sqrtDiscr) / (2 * quadA)} and ${-(quadB + sqrtDiscr) / (2 * quadA)}`)
 }
 //......................................................................................................
+
+
+
+
+
+
 
 
 //13: Given the following code rewrite it using only two if operators. (Hint: use logical operators).
@@ -237,8 +239,8 @@ if (m % 3 === 0 && m % 10 === 0) {
 
 //14: Insert a digit and a number. Check whether the digits contains in the number or not.?
 
-let dig = 3;
-let numb = 3443;
+let dig, numb;
+
 dig = dig.toString();
 numb = numb.toString();
 let isInNumber = false;
@@ -257,9 +259,12 @@ if (isInNumber) {
 //......................................................................................................
 
 
+
+
+
 //15: Enter a number. Reverse its first and last digits. Print the new number.
 
-let longNumber = 124;
+let longNumber;
 let newLongNumber = "";
 longNumber = longNumber.toString();
 if (longNumber.length === 1) {
@@ -284,21 +289,21 @@ if (longNumber.length === 1) {
 //17: Write a program which will compute the area of a rectangular or a triangle after prompting the user to type the name of the figure name. Also check that entered numbers are positive.
 // For the triangle entered numbers are height and and base.
 
-let firstParam = 12;
-let secondParam = 24;
-let nameOfSurface = "triangle";
+let firstParam, secondParam, NameOfSurface;
 
 if (firstParam > 0 && secondParam > 0) {
     let area = firstParam * secondParam;
-    console.log(`Square of ${nameOfSurface} is ${area}`)
+    console.log(`Square of ${NameOfSurface} is ${area}`)
 } else {
     console.log("Please enter only positives")
 }
 //......................................................................................................
 
 
+
+
 //18: (***) Enter a number. Find the difference between its biggest and smallest digits.
-let bigNumber = 1234569;
+let bigNumber;
 
 bigNumber = bigNumber.toString();
 let len = bigNumber.length;
