@@ -72,7 +72,7 @@ function fourthExercise(num) {
 
 
 
-//5. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b).
+//9. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b).
 
 function returnNumbers(a, b, num) {
     let listOfNumbers = [];
@@ -83,4 +83,13 @@ function returnNumbers(a, b, num) {
         listOfNumbers.push(a)
     }
     return listOfNumbers
+}
+
+
+
+
+//10. Given an array of numbers. Find the index of the second maximum element.
+function secondMaxOfArray(arr) {
+    arr.sort();
+    return arr[arr.length - 2]
 }
