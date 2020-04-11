@@ -1,5 +1,6 @@
 // 1. Insert a number. Print ‘yes’ if the number is prime, ‘no’ otherwise.
 
+
 function isNumPrime(num) {
     let isPrime = "yes";
     let i = 2;
@@ -22,6 +23,7 @@ function isNumPrime(num) {
 
 //2. Given a number n ( n>= 0 ). Print nth Fibonacci number.  (Fibonacci series: 0, 1, 1, 2, 3, 5, 8 …, ak = ak-1 + ak-2)
 
+
 function numberFibonacci(n) {
     if (n === 0 || n === 1) {
         return n
@@ -32,6 +34,8 @@ function numberFibonacci(n) {
 
 
 //3. Given a number n( n> 0 ). Print Fibonacci series up to n
+
+
 function sequenceFibonacci(n) {
     let last = 1;
     let numFib = 0;
@@ -53,13 +57,14 @@ function fourthExercise(num) {
     if (num === 0) {
         return "Cannot calculate"
     }
-    num = num;
     let sum = 0;
     let prod = 1;
     let div;
-    for (let i = 0; i < num.toString().length; i++) {
-        sum += num[i];
-        prod *= num[i];
+    while (num) {
+        sum += num % 10;
+        prod *= num % 10;
+        num = Math.floor(num / 10);
+
     }
     div = prod % sum;
     if (div === 0) {
@@ -71,6 +76,7 @@ function fourthExercise(num) {
 
 
 //9. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b).
+
 
 function returnNumbers(a, b, num) {
     let listOfNumbers = [];
