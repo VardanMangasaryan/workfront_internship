@@ -21,7 +21,6 @@ function isNumPrime(num) {
 }
 
 
-
 //2. Given a number n ( n>= 0 ). Print nth Fibonacci number.  (Fibonacci series: 0, 1, 1, 2, 3, 5, 8 …, ak = ak-1 + ak-2)
 
 
@@ -93,9 +92,16 @@ function returnNumbers(a, b, num) {
 
 //10. Given an array of numbers. Find the index of the second maximum element.
 
+
 function secondMaxOfArray(arr) {
-    arr.sort();
-    return arr[arr.length - 2]
+    let newArr = [];
+    let secondMax;
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i])
+    }
+    newArr.sort((a, b) => b - a);
+    secondMax = newArr[1];
+    return arr.indexOf(secondMax)
 }
 
 
