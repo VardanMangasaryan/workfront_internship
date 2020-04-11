@@ -70,8 +70,6 @@ function fourthExercise(num) {
 }
 
 
-
-
 //9. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b).
 
 function returnNumbers(a, b, num) {
@@ -86,10 +84,33 @@ function returnNumbers(a, b, num) {
 }
 
 
-
-
 //10. Given an array of numbers. Find the index of the second maximum element.
+
 function secondMaxOfArray(arr) {
     arr.sort();
     return arr[arr.length - 2]
 }
+
+
+//11.Given an array of numbers, padding amount and repeat count. Pad the array in the following way: the padding amount specifies how many elements should be taken from the array edges, the repeat amount specifies how many times the pad should be repeated. Also, you should check that  padding amount <= length of array.
+
+function padArray(arr, padAmount, repeat) {
+    let pad = [];
+    if (padAmount > arr.length) {
+        return "Invalid padding amount"
+    } else if (padAmount === 0) {
+        return arr
+    } else {
+        var newArr = arr.slice(0, padAmount);
+        var secondArr = arr.slice(-padAmount, arr.length);
+    }
+    for (let i = 0; i < repeat; i++) {
+        pad = pad.concat(newArr)
+    }
+    pad = pad.concat(arr);
+    for (let i = 0; i < repeat; i++) {
+        pad = pad.concat(secondArr)
+    }
+    return pad
+}
+
