@@ -5,7 +5,7 @@ function isNumPrime(num) {
     let isPrime = "yes";
     let i = 2;
     num = Math.abs(num);
-    if (num < 3) {
+    if (num < 2) {
         isPrime = "no"
     } else {
         while (i <= Math.round(num / 2)) {
