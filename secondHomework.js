@@ -70,25 +70,17 @@ function fourthExercise(num) {
 }
 
 
+
+
 //5. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b).
 
 function returnNumbers(a, b, num) {
     let listOfNumbers = [];
-    if (num === 1) {
-        listOfNumbers.push(a);
-        return listOfNumbers
-    } else if (num === 2) {
-        listOfNumbers.push(a, b);
-        return listOfNumbers
-
-    } else {
-        listOfNumbers.push(a);
-        let d = (b - a) / (num-1);
-        for (let i = 0; i < num - 2; i++) {
-            a += d;
-            listOfNumbers.push(a)
-        }
-        listOfNumbers.push(b)
+    listOfNumbers.push(a);
+    let d = (b - a) / (num - 1);
+    for (let i = 0; i < num - 1; i++) {
+        a += d;
+        listOfNumbers.push(a)
     }
     return listOfNumbers
 }
