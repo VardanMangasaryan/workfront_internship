@@ -6,7 +6,7 @@ function isNumPrime(num) {
     let i = 2;
     num = Math.abs(num);
     if (num < 3) {
-        isPrime = false
+        isPrime = "no"
     } else {
         while (i <= Math.round(num / 2)) {
             if (num % i === 0) {
@@ -19,6 +19,7 @@ function isNumPrime(num) {
     }
     return isPrime
 }
+
 
 
 //2. Given a number n ( n>= 0 ). Print nth Fibonacci number.  (Fibonacci series: 0, 1, 1, 2, 3, 5, 8 …, ak = ak-1 + ak-2)
