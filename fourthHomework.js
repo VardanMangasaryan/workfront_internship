@@ -13,21 +13,19 @@ function removeFirst(arr, i = 0) {
 
 
 //2. Given an object. Invert it (keys become values and values become keys). If there is  more than key for that given value create an array.
-function swapKeyAndValue (object) {
+function swapKeyAndValue(object) {
     const newObj = {};
     Object.keys(object).forEach((key) => {
-        if (newObj[object[key]]){
-            if(Array.isArray(newObj[object[key]])){
+        if (newObj[object[key]]) {
+            if (Array.isArray(newObj[object[key]])) {
                 newObj[object[key]].push(key)
-            }
-            else{
+            } else {
                 const arr = [];
                 arr.push(key);
                 arr.push(newObj[object[key]]);
                 newObj[object[key]] = arr
             }
-        }
-        else {
+        } else {
             newObj[object[key]] = key;
         }
     });
@@ -49,20 +47,37 @@ function rotateArray(arr, n) {
     const l = arr.length;
     if (n < 0) {
         n = l + n
-    }
-    else {
+    } else {
         arr.push(arr.shift());
-        n --;}
+        n--;
+    }
     if (n > 0) {
         rotateArray(arr, n);
     }
     return arr
 }
 
+//6. Write a JavaScript function to get all possible subsets of given length of the given array.
+
+
+function getAllSubsets(arr, n) {
+    if (arr.length < n) {
+        return "Invalid size of set"
+    } else if (n === arr.length) {
+        return arr
+    }
+    return arr.reduce(
+        (subsets, value) => subsets.concat(
+            subsets.map(set => [value, ...set])
+        ),
+        [[]]
+    ).filter(a => a.length === n);
+}
+
 
 //7.Create constructor function which instances would be objects with already implemented method &quot;map&quot; (like Array.map) .
 
-function ObjectWithMap(obj){
+function ObjectWithMap(obj) {
     this.obj = obj;
     let key = Object.keys(this.obj);
     let value = Object.values(this.obj);
@@ -82,7 +97,7 @@ let newObj = new ObjectWithMap(
         "x": 1,
         "y": 2
     });
-let mapObj = newObj.objMap((x => x*2));
+let mapObj = newObj.objMap((x => x * 2));
 console.log(newObj);
 
 
