@@ -71,7 +71,7 @@ function getAllSubsets(arr, n) {
             subsets.map(set => [value, ...set])
         ),
         [[]]
-    ).filter(a => a.length === n);
+    ).filter(el => el.length === n);
 }
 
 
@@ -83,11 +83,11 @@ function ObjectWithMap(obj) {
     let value = Object.values(this.obj);
     this.objMap = function (fn) {
         let newValues = value.map(fn);
-        for (let i = 0; i < key.length; i++) {
-            let x = {};
-            x[key[i]] = newValues[i];
+        const x = {};
+        key.map((key,i) =>{
+            x[key] = newValues[i];
             Object.assign(this.obj, x)
-        }
+        });
         return this.obj
     }
 }
@@ -95,12 +95,11 @@ function ObjectWithMap(obj) {
 let newObj = new ObjectWithMap(
     {
         "x": 1,
-        "y": 2
+        "y": 2,
+        "z": 34
     });
+
 let mapObj = newObj.objMap((x => x * 2));
-console.log(newObj);
-
-
-
+console.log(mapObj);
 
 
