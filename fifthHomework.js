@@ -1,3 +1,4 @@
+//1. Given a sorted array and an element from that array. Find the index of that element using binary search.
 function binarySearch(arr, el) {
     let start = 0;
     let end = arr.length - 1;
