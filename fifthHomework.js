@@ -22,7 +22,7 @@ function constructTree(arr, id = "root", obj = {}) {
     if (children.length === 0) {
     } else {
         children.map(el => {
-            obj[el] = constructTree(arr, el)|| {};
+            obj[el] = constructTree(arr, el) || {};
         });
         return obj
     }
