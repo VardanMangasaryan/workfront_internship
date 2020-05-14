@@ -14,3 +14,17 @@ function binarySearch(arr, el) {
     }
     return "element is not in array"
 }
+
+
+//2. Create a function that builds.
+function constructTree(arr, id = "root", obj = {}) {
+    let children = arr.reduce((key, value) => key = value.id === id ? value : key).children;
+    if (children.length === 0) {
+    } else {
+        children.map(el => {
+            obj[el] = constructTree(arr, el)|| {};
+        });
+        return obj
+    }
+}
+
