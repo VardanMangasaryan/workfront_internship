@@ -4,6 +4,10 @@ function isAllUnique(arr) {
     return arr.length === arrToSet.size;
 }
 
+//2. Given an array of numbers. Find the sum of numbers’ quadratic which are even.
+function sumOfEvenQuadratic(arr) {
+    return arr.filter(el => Math.sqrt(el) % 2 === 0).reduce((a, b) => a + b, 0);
+}
 
 // 3. Check whether string is palindrome, or not.
 function isPalindrome(str) {
